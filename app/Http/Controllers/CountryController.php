@@ -15,4 +15,10 @@ class CountryController extends Controller
         return view('welcome')->withCountries($country);
     }
 
+    public function getcountries(Country $country)
+    {
+        $country = Country::all();
+        return view('welcome')->withCountries($country);
+    }
+
 }

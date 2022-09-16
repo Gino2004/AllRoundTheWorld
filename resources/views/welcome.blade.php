@@ -401,16 +401,20 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+        .antialiased{
+            margin:auto;
+        }
+        nav{
+            background-color:red;
+        }
     </style>
 </head>
 <header>
-    </nav>
+    <nav>
     </header>
 <body class="antialiased">
-<nav>
         <a href="overzicht.blade.php">engeland</a>
-</nav>
-    <div class="relative flex items-top justify-center min-h-screen bg-grey-100 dark:bg-white-900 sm:items-center py-4 sm:pt-0">
+    </nav>
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -441,18 +445,18 @@
             display: none;
         }
 
-        img {
+        .photo {
             vertical-align: middle;
             border-radius: 30px;
             height:500px;
+            margin-bottom:20px;
         }
 
         /* Slideshow container */
         .slideshow-container {
-            max-width: 1000px;
-            position: relative;
+            margin-top:80px;
+            width:1000px;
             margin: auto;
-            margin-top: -600px;
         }
 
         .active {
@@ -481,11 +485,14 @@
                 font-size: 11px
             }
         }
+        .url{
+            height:200px;
+            margin:auto;
+        }
     </style>
     </head>
-
+    <main>
     <body>
-        <header>
     @foreach($photos as $photo)
 
         <div class="slideshow-container">
@@ -505,7 +512,29 @@
             <span class="dot"></span>
             <span class="dot"></span>
     </div>
-        </header>
+    @foreach($photos as $photo)
+
+        <img class="url" src="{{$photo->url}}">   
+    @endforeach
+
+    </main>
+    </body>
+    <footer>
+    <table>
+    <tr>
+        <td>AllRoundTheWorld</td>
+    </tr>
+    <tr>
+        <td>Bakkerstraat 21</td>
+    </tr>
+    <tr>
+        <td>AllRoundTheWorld@gmail.com</td>
+    </tr>
+    <tr>
+        <td>087564646</td>
+    </tr>
+    </table>
+    </footer>
         <script>
             let slideIndex = 0;
             showSlides();
@@ -529,5 +558,4 @@
                 setTimeout(showSlides, 5000); // Change image every 2 seconds
             }
         </script>
-    </body>
 </html>
