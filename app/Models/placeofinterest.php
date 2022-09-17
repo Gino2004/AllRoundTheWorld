@@ -11,7 +11,7 @@ class placeofinterest extends Model
 
     public function Photos()
     {
-        return $this->hasMany(photo::class);
+        return $this->HasMany(Photo::class);
     }
 
     public function Countries()

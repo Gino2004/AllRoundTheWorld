@@ -404,33 +404,40 @@
         .antialiased{
             margin:auto;
         }
+        .dropdown {
+        color: #FFFFFF;
+        text-decoration:none;
+        padding: 60px;
+        }
+        
+
         nav{
-            background-color:red;
+        background: #A4A4A4 ;
+        padding: 2%;
+        font-size: 25px;
+        height: 50px;
+        }
+        .login{
+        
         }
     </style>
 </head>
 <header>
     <nav>
-    </header>
 <body class="antialiased">
         <a href="overzicht.blade.php">engeland</a>
-    </nav>
+
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            <a href="{{ url('/dashboard') }}" >Dashboard</a>
             @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+            <a href="{{ route('login') }}" >Log in</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+            <a href="{{ route('register') }}" ">Register</a>
             @endif
             @endauth
-        </div>
         @endif
-    </div>
-    </div>
-    </div>
-    </div>
+    </header>
     <!--- slide show -->
     <style>
         * {
@@ -450,6 +457,7 @@
             border-radius: 30px;
             height:500px;
             margin-bottom:20px;
+            margin-top:80px;
         }
 
         /* Slideshow container */
@@ -489,11 +497,14 @@
             height:200px;
             margin:auto;
         }
+        .footer{
+            background-color: #A4A4A4;
+        }
     </style>
     </head>
     <main>
     <body>
-    @foreach($photos as $photo)
+    @foreach($photo as $photo)
 
         <div class="slideshow-container">
 
@@ -512,15 +523,21 @@
             <span class="dot"></span>
             <span class="dot"></span>
     </div>
-    @foreach($photos as $photo)
+    
 
-        <img class="url" src="{{$photo->url}}">   
-    @endforeach
+        <img class="url" src="{{$photo->url}}">
 
+        @foreach($placeofinterests as $placeofinterest)
+        <p>{{$placeofinterest->title}}</p>   
+        @endforeach
     </main>
     </body>
     <footer>
+    <div class="footer">
     <table>
+    <tr>
+        <td><h4>Bedrijfs Informatie:</h4></td>
+    </tr>
     <tr>
         <td>AllRoundTheWorld</td>
     </tr>
@@ -533,7 +550,11 @@
     <tr>
         <td>087564646</td>
     </tr>
+    <tr>
+        <td><img scr="/image/image.png" width="150" height="100"></td>
+    </tr>
     </table>
+    </div>
     </footer>
         <script>
             let slideIndex = 0;

@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\PlaceofinterestController;
-
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
@@ -33,4 +32,4 @@ Route::middleware([
 
 Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');  
 
-Route::get('/', [PhotoController::class, 'getphoto'])->name('getphoto');
+Route::get('/', [PlaceofinterestController::class, 'getplaceofinterest'])->name('getplaceofinterest');
