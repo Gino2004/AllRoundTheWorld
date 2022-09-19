@@ -499,6 +499,49 @@
         .footer{
             background-color: #A4A4A4;
         }
+        body{
+                
+                color: #fff;
+            }
+            .country-text{
+                text-align: center;
+                font-size: 3em;
+            }
+            
+            .card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                color: #fff;
+                box-shadow: rgba(3, 8, 20, 0.1), rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                transition: all 500ms;
+                overflow: hidden;
+
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .card:hover{
+                box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+                transform: translateY(-3px) scale(1.1);
+            }
+            .photo-grid{
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                grid-auto-rows: 240px;
+            }
+
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle; border-radius:80px;}
+
     </style>
     </head>
     <main>
@@ -523,12 +566,16 @@
             <span class="dot"></span>
     </div>
     
-
-        <img class="url" src="{{$photo->url}}">
-
-        @foreach($placeofinterests as $placeofinterest)
-        <p>{{$placeofinterest->title}}</p>   
-        @endforeach
+    <div class="photo-grid">
+        
+    @foreach($photos as $photo)
+            @foreach($placeofinterests as $placeofinterest)
+                <div class="card" style="background-image:url({{$photo->url}});">
+                    {{$placeofinterest->title}} 
+                </div>
+            @endforeach
+            @endforeach
+        </div>
     </main>
     </body>
     <footer>

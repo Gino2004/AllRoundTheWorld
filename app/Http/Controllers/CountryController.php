@@ -37,5 +37,5 @@ class CountryController extends Controller
         $country = Country::all();
         return view('country')->withCountrys($country);
     }
-
+    
 }
