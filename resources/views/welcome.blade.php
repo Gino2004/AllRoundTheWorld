@@ -436,7 +436,6 @@
             @endif
             @endauth
         @endif
-        @endif
     </header>
     <!--- slide show -->
     <style>
