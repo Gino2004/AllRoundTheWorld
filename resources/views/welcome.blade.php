@@ -417,16 +417,15 @@
         font-size: 25px;
         height: 50px;
         }
-        .login{
         
-        }
     </style>
 </head>
 <header>
     <nav>
 <body class="antialiased">
-        <a href="overzicht.blade.php">engeland</a>
-
+    @foreach($countries as $country)
+        <a href="{{$country->id}}">{{$country->name}}</a>
+    @endforeach
         @if (Route::has('login'))
             @auth
             <a href="{{ url('/dashboard') }}" >Dashboard</a>
@@ -505,7 +504,7 @@
     </head>
     <main>
     <body>
-    @foreach($photo as $photo)
+    @foreach($photos as $photo)
 
         <div class="slideshow-container">
 

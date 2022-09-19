@@ -38,4 +38,3 @@ Route::middleware([
 
 Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');  
 
-Route::get('/', [PlaceofinterestController::class, 'getplaceofinterest'])->name('getplaceofinterest');

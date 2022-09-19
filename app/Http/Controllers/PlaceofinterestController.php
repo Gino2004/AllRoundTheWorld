@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class PlaceofinterestController extends Controller
 {
+
     public function getplaceofinterest(placeofinterest $placeofinterest)
     {
         $photo = Photo::all();
@@ -20,4 +21,5 @@ class PlaceofinterestController extends Controller
         $placeofinterest = Placeofinterest::all();
         return view('country')->withPlaceofinterests($placeofinterest)->withPhoto($photo);
     }
+
 }
