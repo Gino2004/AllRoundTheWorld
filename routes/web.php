@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PlaceofinterestController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+    //return view('welcome');
+//});
 
 Route::get('/country', function (){
     return view('country');
 });
+Route::get('/country', [PlaceofinterestController::class, 'getTheplaceofinterest'])->name('getTheplaceofinterest');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -30,3 +35,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');  
+
+Route::get('/', [PlaceofinterestController::class, 'getplaceofinterest'])->name('getplaceofinterest');

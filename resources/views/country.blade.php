@@ -6,8 +6,8 @@
         <title>Laravel</title>
         <style>
             body{
-                /* background: rgb(19, 19, 19); */
-                /* color: #fff; */
+                background: rgb(19, 19, 19);
+                color: #fff;
             }
             .country-text{
                 text-align: center;
@@ -119,9 +119,11 @@
         <br/>
 
         <div class="photo-grid">
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021127726607892580/unknown.png?size=4096);">
-                Takayama
-            </div>
+            @foreach($placeofinterests as $placeofinterest)
+                <div class="card" style="background-image:url({{$photo->url}});">
+                    {{$placeofinterest->title}} 
+                </div>
+            @endforeach
             <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128171929739364/unknown.png?size=4096);">
                 Koya-San
             </div>
