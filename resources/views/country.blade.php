@@ -126,15 +126,6 @@
                     </div>
                 @endforeach
             @endforeach
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128171929739364/unknown.png?size=4096);">
-                Koya-San
-            </div>
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128461517066320/unknown.png?size=4096);">
-                Tsumago
-            </div>
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128567280631868/unknown.png?size=4096);">
-                Nara
-            </div>
         </div>
 
         <script>
