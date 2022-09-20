@@ -8,3 +8,5 @@ class UserRatingController extends Controller
 {
     //
 }
+
+

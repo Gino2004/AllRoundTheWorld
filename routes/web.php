@@ -38,3 +38,6 @@ Route::middleware([
 
 Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');  
 
+Route::get('/bestemming', function (){
+    return view('bestemming');
+});
