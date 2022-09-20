@@ -395,252 +395,38 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
-    </style>
 
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-        .antialiased{
-            margin:auto;
-        }
-        .dropdown {
-        color: #FFFFFF;
-        text-decoration:none;
-        padding: 60px;
-        }
-        
+body{
 
-        nav{
-        background: #A4A4A4 ;
-        padding: 2%;
-        font-size: 25px;
-        height: 50px;
-        }
-        
+    background-color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    
+
+}
+
+.cards {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-width: 1500px;
+  height:1200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: #fff;
+}
     </style>
 </head>
+<div class="cards">
 <header>
-    <nav>
-<body class="antialiased">
-    @foreach($countries as $country)
-        <a href="{{$country->id}}">{{$country->name}}</a>
-    @endforeach
-        @if (Route::has('login'))
-            @auth
-            <a href="{{ url('/dashboard') }}" >Dashboard</a>
-            @else
-            <a href="{{ route('login') }}" >Log in</a>
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" ">Register</a>
-            @endif
-            @endauth
-        @endif
-    </header>
-    <!--- slide show -->
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Verdana, sans-serif;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .photo {
-            vertical-align: middle;
-            border-radius: 30px;
-            height:500px;
-            margin-bottom:20px;
-            margin-top:80px;
-        }
-
-        /* Slideshow container */
-        .slideshow-container {
-            margin-top:80px;
-            width:1000px;
-            margin: auto;
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .text {
-                font-size: 11px
-            }
-        }
-        .url{
-            height:200px;
-            margin:auto;
-        }
-        .footer{
-            background-color: #A4A4A4;
-        }
-        body{
-                
-                color: #fff;
-            }
-            .country-text{
-                text-align: center;
-                font-size: 3em;
-            }
-            
-            .card{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 3rem;
-                color: #fff;
-                box-shadow: rgba(3, 8, 20, 0.1), rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-                height: 100%;
-                width: 100%;
-                border-radius: 4px;
-                transition: all 500ms;
-                overflow: hidden;
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            .card:hover{
-                box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-                transform: translateY(-3px) scale(1.1);
-            }
-            .photo-grid{
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                grid-auto-rows: 240px;
-            }
-
-            * {box-sizing: border-box;}
-            body {font-family: Verdana, sans-serif;}
-            .mySlides {display: none;}
-            img {vertical-align: middle; border-radius:80px;}
-
-    </style>
-    </head>
+    @include('homepagina.navbar')
+</header>
     <main>
-    <body>
-    @foreach($photos as $photo)
-
-        <div class="slideshow-container">
-
-
-            <div class="mySlides fade">
-                <img class="photo" src="{{$photo->url}}" style="width:100%">
-
-            </div>
-        
-
-        </div>
-        @endforeach
-        <br>
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-    </div>
-    
-    <div class="photo-grid">
-
-        
-    @foreach($photos as $photo)
-
-            @foreach($placeofinterests as $placeofinterest)
-                <div class="card" style="background-image:url({{$photo->url}});">
-                    {{$placeofinterest->title}} 
-                </div>
-            @endforeach
-
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128171929739364/unknown.png?size=4096);">
-                Koya-San
-            </div>
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128461517066320/unknown.png?size=4096);">
-                Tsumago
-            </div>
-            <div class="card" style="background-image:url(https://cdn.discordapp.com/attachments/930469407602409472/1021128567280631868/unknown.png?size=4096);">
-                Nara
-            </div>
-        </div>
-        <img class="url" src="{{$photo->url}}">
-
-        @foreach($placeofinterests as $placeofinterest)
-        <p>{{$placeofinterest->title}}</p>   
-        @endforeach
-            @endforeach
-        </div>
+    @include('homepagina.slider')
+    @include('homepagina.tussen')
     </main>
     </body>
-    <footer>
-    <div class="footer">
-    <table>
-    <tr>
-        <td><h4>Bedrijfs Informatie:</h4></td>
-    </tr>
-    <tr>
-        <td>AllRoundTheWorld</td>
-    </tr>
-    <tr>
-        <td>Bakkerstraat 21</td>
-    </tr>
-    <tr>
-        <td>AllRoundTheWorld@gmail.com</td>
-    </tr>
-    <tr>
-        <td>087564646</td>
-    </tr>
-    <tr>
-        <td><img scr="/image/image.png" width="150" height="100"></td>
-    </tr>
-    </table>
+<footer>
+    @include('homepagina.footer')
+</footer>
     </div>
-    </footer>
-        <script>
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 5000); // Change image every 2 seconds
-            }
-        </script>
 </html>
+
