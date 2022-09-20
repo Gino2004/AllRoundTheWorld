@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\models\Photo;
+use App\Models\placeofinterest;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -12,13 +14,28 @@ class CountryController extends Controller
     public function getcountry()
     {
         $country = Country::all();
-        return view('welcome')->withCountrys($country);
+        $photo = Photo::all();
+        $placeofinterest = Placeofinterest::all();
+
+    
+        return view('welcome',
+    [
+        'countries'=> $country,
+        'photos'=>$photo,
+        'placeofinterests'=> $placeofinterest
+
+    ]);
     }
 
-    public function getcountries(Country $country)
+    public function getThecountry()
     {
         $country = Country::all();
-        return view('welcome')->withCountrys($country);
+        return view('country')->withCountrys($country);
     }
-
+    public function getThecountries(Country $country)
+    {
+        $country = Country::all();
+        return view('country')->withCountrys($country);
+    }
+    
 }

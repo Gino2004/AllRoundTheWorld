@@ -20,6 +20,12 @@ use Illuminate\Support\Facades\Route;
     //return view('welcome');
 //});
 
+Route::get('/country', function (){
+    return view('country');
+});
+Route::get('/country', [PlaceofinterestController::class, 'getTheplaceofinterest'])->name('getTheplaceofinterest');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -32,4 +38,3 @@ Route::middleware([
 
 Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');  
 
-Route::get('/', [PlaceofinterestController::class, 'getplaceofinterest'])->name('getplaceofinterest');
