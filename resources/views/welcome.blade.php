@@ -422,6 +422,7 @@ body{
     <main>
     @include('homepagina.slider')
     @include('homepagina.tussen')
+    @include('homepagina.onderste')
     </main>
     </body>
 <footer>
