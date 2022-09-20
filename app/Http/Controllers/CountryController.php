@@ -10,19 +10,25 @@ use Illuminate\Http\Request;
 class CountryController extends Controller
 {
     //
-
     public function getcountry()
     {
         $country = Country::all();
         $photo = Photo::all();
-        $placeofinterest = Placeofinterest::all();
+        $placeofinterest = Placeofinterest::limit(2)->get();
+        $countrys = Country::all();
+        $photoo = Photo::limit(3)->get();
+        $placeofinterestsen = Placeofinterest::all();
+
 
     
         return view('welcome',
     [
         'countries'=> $country,
         'photos'=>$photo,
-        'placeofinterests'=> $placeofinterest
+        'placeofinterests'=> $placeofinterest,
+        'countries'=> $countrys,
+        'photoo'=>$photoo,
+        'placeofinterestsen'=> $placeofinterestsen
 
     ]);
     }
