@@ -15,9 +15,8 @@ class CountryController extends Controller
         $country = Country::all();
         $photo = Photo::all();
         $placeofinterest = Placeofinterest::limit(2)->get();
-        $countrys = Country::all();
         $photoo = Photo::limit(3)->get();
-        $placeofinterestsen = Placeofinterest::all();
+        $placeofinterestsen = Placeofinterest::limit(1)->get();
 
 
     
@@ -26,7 +25,6 @@ class CountryController extends Controller
         'countries'=> $country,
         'photos'=>$photo,
         'placeofinterests'=> $placeofinterest,
-        'countries'=> $countrys,
         'photoo'=>$photoo,
         'placeofinterestsen'=> $placeofinterestsen
 
