@@ -407,7 +407,7 @@ body{
 .cards {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   max-width: 1500px;
-  height:1200px;
+  height:1900px;
   margin: auto;
   text-align: center;
   font-family: arial;
