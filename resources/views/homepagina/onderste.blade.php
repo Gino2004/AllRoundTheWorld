@@ -8,15 +8,16 @@
 </head>
 <style> 
 .photos{
-        display: block;
+    display: block;
     margin-left: 50px;
     margin-top: 70px;
     margin-right: auto;
-    height:auto;
-    width: 600px;
+    height: 370px;
+    width: 570px;
     border-radius:20px;
     border-radius:20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-left: 70px;
 }
 .card2 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -24,17 +25,31 @@
   height:350px;
   font-family: arial;
   background-color: #fff;
-  margin-left: 700px;
-  margin-top: -475px;
+  margin-left: 789px;
+  margin-top: -375px;
   border-radius: 20px;
   color: black;
 }
+
+.card3 {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  max-width: 631px;
+  height: 377px;
+  font-family: arial;
+  background-color: #fff;
+  margin-left: -810px;
+  margin-top: 32px;
+  border-radius: 20px;
+  color: black;
+}
+
+
 </style>
 <body>
     <main>
     @foreach($placeofinterestsen as $placeofinterests)
             @foreach($placeofinterests->Photos as $photo)
-            <img class="photos" src="{{$photo->url}}">
+            <img class="card3" src="{{$photo->url}}">
 
                     <div class="card2">{{$placeofinterests->title}} 
                     {{$placeofinterests->description}}
