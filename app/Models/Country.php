@@ -11,7 +11,7 @@ class Country extends Model
 
     public function placeofinterests()
     {
-        return $this->hasMany(placeofinterest::class);
+        return $this->hasMany(placeofinterest::class,'countrie_id');
     }
 
     public function Continents()
