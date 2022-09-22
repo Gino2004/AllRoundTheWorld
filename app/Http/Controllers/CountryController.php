@@ -20,7 +20,7 @@ class CountryController extends Controller
         $photoo = Photo::limit(3)->get();
         $placeofinterestsen = Placeofinterest::limit(1)->get();
 
-
+      
     
         return view('welcome',
     [
