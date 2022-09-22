@@ -53,17 +53,13 @@
 </style>
 <body>
     <div class="photo-grid">
-
-        
-   
-
             @foreach($placeofinterests as $placeofinterest)
             @foreach($placeofinterest->Photos as $photo)
                 <div class="card" style="background-image:url({{$photo->url}});">
                     {{$placeofinterest->title}} 
                 </div>
             @endforeach
-@endforeach
+            @endforeach
         </div>
     </main>
 </body>

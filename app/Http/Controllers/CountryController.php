@@ -29,7 +29,7 @@ class CountryController extends Controller
         'photos'=>$photo,
         'placeofinterests'=> $placeofinterest,
         'photoo'=>$photoo,
-        'placeofinterestsen'=> $placeofinterestsen
+        'placeofinterestsen'=> $placeofinterestsen,
 
     ]);
     }

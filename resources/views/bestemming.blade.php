@@ -6,7 +6,7 @@ body{
 
     background-color: #d5d5d5;
     font-family: Arial, sans-serif;
-
+    
 }
 
 .card {
@@ -17,7 +17,7 @@ body{
   text-align: center;
   font-family: arial;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .img {
@@ -27,7 +27,6 @@ body{
     /*margin-right: auto;*/
     height:auto;
     width: 600px;
-    style=border-radius:20px;
     border-radius:20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -36,7 +35,7 @@ body{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   max-width: 650px;
   height:350px;
-  font-family: arial;
+  font-family: Arial, sans-serif;
   background-color: #fff;
   margin-left: 700px;
   margin-top: -475px;
@@ -47,7 +46,7 @@ body{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   max-width: 650px;
   height:90px;
-  font-family: arial;
+  font-family: Arial, sans-serif;
   background-color: #fff;
   margin-left: 700px;
   margin-top: 20px;
@@ -71,12 +70,6 @@ body{
   </div>
 
 </div>
-
-
-
-
-
-
 
 </body>
 </html>
