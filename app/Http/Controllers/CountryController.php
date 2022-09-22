@@ -34,15 +34,18 @@ class CountryController extends Controller
     ]);
     }
 
-    public function getThecountry()
+    public function getThecountry(Country $Country)
     {
-        $country = Country::all();
-        return view('country')->withCountrys($country);
-    }
-    public function getThecountries(Country $country)
-    {
-        $country = Country::all();
-        return view('country')->withCountrys($country);
+        $continent = Continent::all();
+        $placeofinterest = Placeofinterest::limit(10)->get();
+        $photoo = Photo::limit(3)->get();
+
+        return view('country',[
+        'continents'=> $continent,
+        'countries'=> $Country,
+        'placeofinterests'=> $placeofinterest,
+        'photoo'=>$photoo,
+        ]);
     }
     
 }

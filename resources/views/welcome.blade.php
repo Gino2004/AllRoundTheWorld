@@ -412,7 +412,6 @@ body{
   text-align: center;
   font-family: arial;
   background-color: #fff;
-  border-top:20px;
   border-radius:20px;
   margin-left: 20px;
   margin-top: 20px;
@@ -455,7 +454,7 @@ body{
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
     </style>
@@ -464,30 +463,27 @@ body{
 <header>
     @include('homepagina.navbar')
 </header>
+<main>
 
-<div class="cards">
-    <main>
+    <div class="cards">
     @include('homepagina.slider')
-
     </div>
 
     <div class="fixed-bg"></div>
-
+    
     <div class="cards2">
-    <main>
     @include('homepagina.tussen')
     </div>
 
     <div class="cards3">
-    <main>
     @include('homepagina.onderste')
     </div>
 
-
-    <footer>
+</main>
+<footer>
     @include('homepagina.footer')
 </footer>
-    </main>
+
     </body>
 </html>
 

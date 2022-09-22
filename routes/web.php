@@ -20,10 +20,10 @@ use Illuminate\Support\Facades\Route;
     //return view('welcome');
 //});
 
-Route::get('/country', function (){
-    return view('country');
-});
-Route::get('/country', [PlaceofinterestController::class, 'getTheplaceofinterest'])->name('getTheplaceofinterest');
+//Route::get('/country', function (){
+    //return view('country');
+//});
+Route::get('/country/{country}', [CountryController::class, 'getThecountry'])->name('getThecountry');
 
 
 Route::middleware([

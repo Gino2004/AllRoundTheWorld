@@ -54,7 +54,7 @@
             <img class="card3" src="{{$photo->url}}">
 
         <div class="card2">
-            {$placeofinterests->title}}
+            {{$placeofinterests->title}}
             {{$placeofinterests->description}}
         </div>
         </div>

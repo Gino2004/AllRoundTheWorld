@@ -121,15 +121,20 @@
             <nav>
                 <img class="LogoPhoto" src="https://cdn.discordapp.com/attachments/917847326951870514/1021759702050275348/aawrlogo.png?size=4096" alt="">
                 <ul class="menu" style="padding-left:10px">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Countries</a>
                         <ul class="submenu">
                             @foreach($continents as $continent)
                                 <li><a href="/">{{$continent->name}}</a>
                                     <ul class="submenu2">
+<<<<<<< HEAD
                                         @foreach($continents->countries as $country)
                                         <!-- $countrys->placeofinterests as $placeofinterest -->
                                             <li><a href="#">{{$country->name}}</a></li>
+=======
+                                        @foreach($continent->Countries as $country)
+                                            <li><a href="/country/{{$country->id}}">{{$country->name}}</a></li>
+>>>>>>> b637e6b1828e3cc688a1ef8230399e0089f7e3e0
                                         @endforeach
                                     </ul>
                                 </li>

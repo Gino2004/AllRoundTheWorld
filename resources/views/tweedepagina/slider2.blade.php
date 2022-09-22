@@ -5,74 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>   
-    * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Verdana, sans-serif;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .photo {
-            vertical-align: middle;
-            border-radius: 30px;
-            height:500px;
-            margin-bottom:20px;
-            margin-top:80px;
-        }
-
-        /* Slideshow container */
-        .slideshow-container {
-            margin-top:80px;
-            width:1000px;
-            margin: auto;
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .text {
-                font-size: 11px
-            }
-        }</style>
 </head>
-<main>
 <body>
-@foreach($photoo as $photo)
+       
+@foreach($countries->placeofinterests as $placeofinterest)
+        @foreach($placeofinterest->Photos as $photo)
 
 <div class="slideshow-container">
 
 
     <div class="mySlides fade">
         <img class="photo" src="{{$photo->url}}" style="width:100%">
+
     </div>
 
 
 </div>
+@endforeach
 @endforeach
 <br>
 <div style="text-align:center">
@@ -105,5 +54,4 @@
             }
         </script>
 </body>
-        </main>
 </html>
