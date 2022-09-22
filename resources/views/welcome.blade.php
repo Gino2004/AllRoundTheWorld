@@ -430,7 +430,7 @@ body{
   border-top:20px;
   border-radius:20px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: -160px;
   margin-bottom: 40px;
 }
 
