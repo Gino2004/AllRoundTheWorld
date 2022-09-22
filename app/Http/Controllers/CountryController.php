@@ -37,7 +37,7 @@ class CountryController extends Controller
     public function getThecountry(Country $Country)
     {
         $continent = Continent::all();
-        $placeofinterest = Placeofinterest::limit(2)->get();
+        $placeofinterest = Placeofinterest::limit(10)->get();
         $photoo = Photo::limit(3)->get();
 
         return view('country',[

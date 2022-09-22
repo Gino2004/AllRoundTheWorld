@@ -121,7 +121,7 @@
             <nav>
                 <img class="LogoPhoto" src="https://cdn.discordapp.com/attachments/917847326951870514/1021759702050275348/aawrlogo.png?size=4096" alt="">
                 <ul class="menu" style="padding-left:10px">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Countries</a>
                         <ul class="submenu">
                             @foreach($continents as $continent)
