@@ -27,7 +27,7 @@
                 border-radius: 4px;
                 transition: all 500ms;
                 overflow: hidden;
-
+                
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
