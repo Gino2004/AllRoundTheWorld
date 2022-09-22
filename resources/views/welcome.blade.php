@@ -407,27 +407,87 @@ body{
 .cards {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   max-width: 1500px;
-  height:1900px;
-  margin: auto;
+  height:630px;
+  /*margin: auto;*/
   text-align: center;
   font-family: arial;
   background-color: #fff;
+  border-top:20px;
+  border-radius:20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
+
+.cards2 {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-width: 1500px;
+  height:320px;
+  /*margin: auto;*/
+  text-align: center;
+  font-family: arial;
+  background-color: #fff;
+  border-top:20px;
+  border-radius:20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.cards3 {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-width: 1500px;
+  height:440px;
+  /*margin: auto;*/
+  text-align: center;
+  font-family: arial;
+  background-color: #fff;
+  border-top:20px;
+  border-radius:20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.fixed-bg {
+  background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
     </style>
 </head>
-<div class="cards">
+
 <header>
     @include('homepagina.navbar')
 </header>
+
+<div class="cards">
     <main>
     @include('homepagina.slider')
+
+    </div>
+
+    <div class="fixed-bg"></div>
+
+    <div class="cards2">
+    <main>
     @include('homepagina.tussen')
+    </div>
+
+    <div class="cards3">
+    <main>
     @include('homepagina.onderste')
-    </main>
-    </body>
-<footer>
+    </div>
+
+
+    <footer>
     @include('homepagina.footer')
 </footer>
-    </div>
+    </main>
+    </body>
 </html>
 
