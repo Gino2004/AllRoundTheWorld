@@ -127,8 +127,9 @@
                             @foreach($continents as $continent)
                                 <li><a href="/">{{$continent->name}}</a>
                                     <ul class="submenu2">
-                                        @foreach($continents as $continent)
-                                            <li><a href="#">{{$continent->name}}</a></li>
+                                        @foreach($continents->countries as $country)
+                                        <!-- $countrys->placeofinterests as $placeofinterest -->
+                                            <li><a href="#">{{$country->name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
