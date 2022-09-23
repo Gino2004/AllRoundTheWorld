@@ -122,13 +122,12 @@
                 <img class="LogoPhoto" src="https://cdn.discordapp.com/attachments/917847326951870514/1021759702050275348/aawrlogo.png?size=4096" alt="">
                 <ul class="menu" style="padding-left:10px">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Countries</a>
+                    <li><a href="#">Continents</a>
                         <ul class="submenu">
                         
                             @foreach($continents as $continent)
                                 <li><a href="/">{{$continent->name}}</a>
                                     <ul class="submenu2">
-                                       
                                         @foreach($continent->Countries as $country)
                                             <li><a href="/country/{{$country->id}}">{{$country->name}}</a></li>
                                         @endforeach
