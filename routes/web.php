@@ -3,7 +3,6 @@
 use App\Http\Controllers\PlaceofinterestController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PhotoController;
-use App\Models\placeofinterest;
 use Illuminate\Support\Facades\Route;
 
 /*

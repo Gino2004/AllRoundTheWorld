@@ -1,7 +1,11 @@
-<html>
-<body>   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 <style>
-
 body{
 
     background-color: #d5d5d5;
@@ -56,14 +60,11 @@ body{
 </style>
 </head>
 <body>
-
 <div class="card">
-@foreach($placeofinterests as $placeofinterest)
-@foreach($placeofinterest->Photos as $photo)
     </div>
     </a>
   <h1> {{$placeofinterest->title}}</h1>
-  <img src="{{$photo->url}}" class="img">
+  <img src="{{$placeofinterests->Photos->url}}" class="img">
 
   <div class="card2">
   <h3>{{$placeofinterest->description}}</h3>
@@ -74,7 +75,5 @@ body{
   </div>
 
 </div>
-@endforeach
-@endforeach
 </body>
 </html>
