@@ -60,14 +60,11 @@ body{
 </style>
 </head>
 <body>
-
 <div class="card">
-@foreach($placeofinterests as $placeofinterest)
-@foreach($placeofinterest->Photos as $photo)
     </div>
     </a>
   <h1> {{$placeofinterest->title}}</h1>
-  <img src="{{$photo->url}}" class="img">
+  <img src="{{$placeofinterests->Photos->url}}" class="img">
 
   <div class="card2">
   <h3>{{$placeofinterest->description}}</h3>
@@ -78,7 +75,5 @@ body{
   </div>
 
 </div>
-@endforeach
-@endforeach
 </body>
 </html>
