@@ -22,13 +22,13 @@ body{
   font-family: arial;
   background-color: #fff;
   border-radius: 20px;
+  margin-bottom:20px;
+  margin-top:20px
 }
 
 .img {
-    display: block;
-    margin-left: 50px;
-    margin-top: 70px;
-    /*margin-right: auto;*/
+    margin-right: 700px;
+    margin-top: 159px;
     height:auto;
     width: 600px;
     border-radius:20px;
@@ -42,7 +42,7 @@ body{
   font-family: Arial, sans-serif;
   background-color: #fff;
   margin-left: 700px;
-  margin-top: -475px;
+  margin-top: -387px;
   border-radius: 20px;
 }
 
@@ -74,7 +74,6 @@ body{
       <h3>test rating card</h3>
       </div>
 
-      </div>
     </div>
     </a>
 </body>

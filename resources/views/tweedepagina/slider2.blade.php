@@ -6,8 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+      * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .photo {
+            vertical-align: middle;
+            border-radius: 30px;
+            height:500px;
+            /* margin-bottom:20px; */
+            /* margin-top:80px; */
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* margin-top:80px; */
+            width:70%;
+            margin-left: 15%;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+        .name{
+            margin-left:45%;
+        }
+    </style>
 <body>
+    <div class="name">
     <h1>{{$countries->name}}</h1>
+    </div>
 @foreach($countries->placeofinterests as $placeofinterest)
         @foreach($placeofinterest->Photos as $photo)
 
