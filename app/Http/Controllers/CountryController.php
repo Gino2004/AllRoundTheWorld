@@ -18,9 +18,7 @@ class CountryController extends Controller
         $photo = Photo::all();
         $placeofinterest = Placeofinterest::limit(2)->get();
         $photoo = Photo::limit(3)->get();
-        $placeofinterestsen = Placeofinterest::limit(1)->get();
-
-      
+        $placeofinterestsen = Placeofinterest::limit(1)->get();        
     
         return view('welcome',
     [
@@ -30,7 +28,6 @@ class CountryController extends Controller
         'placeofinterests'=> $placeofinterest,
         'photoo'=>$photoo,
         'placeofinterestsen'=> $placeofinterestsen,
-
     ]);
     }
 
