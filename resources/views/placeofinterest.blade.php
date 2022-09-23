@@ -57,7 +57,9 @@ body{
 </head>
 <body>
   @include('homepagina.navbar')
+  <main>
   @include('derdepagina.informatie')
+</main>
   @include('homepagina.footer')
 </div>
 

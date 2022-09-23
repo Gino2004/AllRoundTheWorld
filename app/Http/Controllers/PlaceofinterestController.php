@@ -16,7 +16,7 @@ class PlaceofinterestController extends Controller
         $placeofinterest = Placeofinterest::all();
         $photoo = Photo::all();
 
-        return view('country',[
+        return view('placeofinterest',[
         'continents'=> $continent,
         'countries'=> $Country,
         'placeofinterests'=> $placeofinterest,
