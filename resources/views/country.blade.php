@@ -82,6 +82,6 @@
     @include('tweedepagina.slider2')
     @include('tweedepagina.tussen2')
         </main>
-
+        @include('homepagina.footer')
     </body>
 </html>
