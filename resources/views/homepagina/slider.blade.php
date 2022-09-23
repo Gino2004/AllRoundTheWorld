@@ -22,15 +22,15 @@
             vertical-align: middle;
             border-radius: 30px;
             height:500px;
-            margin-bottom:20px;
-            margin-top:80px;
+            /* margin-bottom:20px; */
+            /* margin-top:80px; */
         }
 
         /* Slideshow container */
         .slideshow-container {
-            margin-top:80px;
-            width:1000px;
-            margin: auto;
+            /* margin-top:80px; */
+            width:70%;
+            margin-left: 15%;
         }
 
         .active {
@@ -63,7 +63,6 @@
 <main>
 <body>
 @foreach($photoo as $photo)
-
 <div class="slideshow-container">
 
 
@@ -74,7 +73,7 @@
 
 </div>
 @endforeach
-<br>
+
 <div style="text-align:center">
     <span class="dot"></span>
     <span class="dot"></span>

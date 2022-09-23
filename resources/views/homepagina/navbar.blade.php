@@ -59,6 +59,7 @@
 
             .submenu{
                 position: absolute;
+                z-index: 10;
                 background-color: #2c3e50;
                 width: 140px;
                 left: 0;

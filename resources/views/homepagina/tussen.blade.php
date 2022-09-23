@@ -29,8 +29,7 @@
                 border-radius: 4px;
                 transition: all 500ms;
                 overflow: hidden;
-                margin-left: 80px;
-                margin-top: 40px;
+                margin-left: 12.5%;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;

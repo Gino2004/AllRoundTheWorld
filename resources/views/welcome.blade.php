@@ -396,88 +396,95 @@
             }
         }
 
-body{
+        body{
 
-    background-color: #d5d5d5;
-    font-family: Arial, sans-serif;
-    
+            background-color: #d5d5d5;
+            font-family: Arial, sans-serif;
+            
 
-}
+        }
 
-.cards {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  max-width: 1500px;
-  height:630px;
-  /*margin: auto;*/
-  text-align: center;
-  font-family: arial;
-  background-color: #fff;
-  border-radius:20px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
+        .cards{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 20px;
+            max-width: 95%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: -290px;
+            background-color: #fff;
+            position: relative;
+        }
+        .cards2{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 20px;
+            max-width: 95%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-top: -160px;
+            background-color: #fff;
+        }
+        .cards3{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 20px;
+            max-width: 95%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: -232px;
+            background-color: #fff;
+            position: relative;
+        }
 
-.cards2 {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  max-width: 1500px;
-  height:320px;
-  /*margin: auto;*/
-  text-align: center;
-  font-family: arial;
-  background-color: #fff;
-  border-top:20px;
-  border-radius:20px;
-  margin-left: 20px;
-  margin-top: -160px;
-  margin-bottom: 40px;
-}
-
-.cards3 {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  max-width: 1500px;
-  height:440px;
-  /*margin: auto;*/
-  text-align: center;
-  font-family: arial;
-  background-color: #fff;
-  border-top:20px;
-  border-radius:20px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.fixed-bg {
-  background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  /*background-size: cover;*/
-}
-
+        .fixed-bg {
+            background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
+            min-height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fixed-bg2 {
+            background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
+            min-height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .whitespace1{
+            height: 50px;
+        }
     </style>
 </head>
 
 <header>
+    <div class="navbar">
     @include('homepagina.navbar')
+    </div>
 </header>
 <main>
-
+    
+    <div class="whitespace1"></div>
+    
     <div class="cards">
-    @include('homepagina.slider')
+        @include('homepagina.slider')
     </div>
 
     <div class="fixed-bg"></div>
     
     <div class="cards2">
-    @include('homepagina.tussen')
+        @include('homepagina.tussen')
     </div>
 
+    <div class="whitespace1"></div>
+
     <div class="cards3">
-    @include('homepagina.onderste')
+        @include('homepagina.onderste')
     </div>
+
+    <div class="fixed-bg2"></div>
 
 </main>
 <footer>
