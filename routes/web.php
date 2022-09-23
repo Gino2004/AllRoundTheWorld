@@ -3,6 +3,7 @@
 use App\Http\Controllers\PlaceofinterestController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PhotoController;
+use App\Models\placeofinterest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,9 @@ use Illuminate\Support\Facades\Route;
     //return view('country');
 //});
 Route::get('/country/{country}', [CountryController::class, 'getThecountry'])->name('getThecountry');
+
+Route::get('/placeofinterest/{placeofinterest}', [PlaceofinterestController::class, 'getTheplaceofinterest'])->name('getTheplaceofinterest');
+
 
 
 Route::middleware([

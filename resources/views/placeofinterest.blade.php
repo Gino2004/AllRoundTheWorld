@@ -56,19 +56,9 @@ body{
 </style>
 </head>
 <body>
-
-<div class="card">
-  <h1>huijbergen test pagina</h1>
-  <img src="https://breda-en-omgeving.nl/fotos-huijbergen_bestanden/image039.jpg" class="img">
-
-  <div class="card2">
-  <h3>test text voor de beschrijving</h3>
-  </div>
-
-  <div class="card3">
-  <h3>test rating card</h3>
-  </div>
-
+  @include('homepagina.navbar')
+  @include('derdepagina.informatie')
+  @include('homepagina.footer')
 </div>
 
 </body>

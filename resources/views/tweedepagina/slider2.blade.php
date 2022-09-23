@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-       
+    <h1>{{$countries->name}}</h1>
 @foreach($countries->placeofinterests as $placeofinterest)
         @foreach($placeofinterest->Photos as $photo)
 
