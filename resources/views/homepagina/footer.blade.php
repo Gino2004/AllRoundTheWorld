@@ -14,7 +14,13 @@
             margin:auto;
         }
         .footer{
-            background-color: #3D69A8;
+            background-color: #2c3e50;
+        }
+
+        table{
+         border: 1px solid;
+         font-family: Arial, Helvetica, sans-serif;
+         margin-left: 59px;
         }
     </style>
 <footer>
@@ -36,7 +42,7 @@
         <td>087564646</td>
     </tr>
     <tr>
-        <td><img scr="/image/image.png" width="150" height="100"></td>
+        <td><img scr="https://www.planetware.com/photos-large/NL/netherlands-amsterdam-rijksmuseum-2.jpg" width="150" height="100"></td>
     </tr>
     </table>
 </div>
