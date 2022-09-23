@@ -61,19 +61,21 @@ body{
 </head>
 <body>
 <div class="card">
+@foreach($placeofinterest->Photos as $photoo)
+    <img src="{{$photoo->url}}" class="img">
+      @endforeach
+      <div class="card2">
+      <h1>{{$placeofinterest->title}}</h1>
+
+      <h3>{{$placeofinterest->description}}</h3>
+      </div>
+
+      <div class="card3">
+      <h3>test rating card</h3>
+      </div>
+
+      </div>
     </div>
     </a>
-  <h1> {{$placeofinterest->title}}</h1>
-  <img src="{{$placeofinterests->Photos->url}}" class="img">
-
-  <div class="card2">
-  <h3>{{$placeofinterest->description}}</h3>
-  </div>
-
-  <div class="card3">
-  <h3>test rating card</h3>
-  </div>
-
-</div>
 </body>
 </html>
