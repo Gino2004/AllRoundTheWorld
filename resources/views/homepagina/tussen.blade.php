@@ -7,60 +7,59 @@
     <title>Document</title>
 </head>
 <main>
-    <style>body{
-                
-                color: #fff;
-            }
-            .country-text{
-                text-align: center;
-                font-size: 3em;
-            }
+    <style>
+        *{
+            color: white;
+        }
+        .grid-2-colums-1-row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 300px;
+        }
+        .photo-card{
+            margin-left: 5%;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius:20px;
+            height: 100%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
             
-            .card{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 3rem;
-                color: #fff;
-                box-shadow: rgba(3, 8, 20, 0.1), rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-                height: 100%;
-                width: 75%;
-                border-radius: 4px;
-                transition: all 500ms;
-                overflow: hidden;
-                margin-left: 12.5%;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius:20px;
-            }
-            .card:hover{
-                box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-                transform: translateY(-3px) scale(1.1);
-            }
-            .photo-grid{
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                grid-auto-rows: 240px;
-            }
-
-            * {box-sizing: border-box;}
-            body {font-family: Verdana, sans-serif;}
-            .mySlides {display: none;}
-            img {vertical-align: middle; border-radius:80px;}
-</style>
+        }
+        .photo-card:hover{
+            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+    </style>
 <body>
-    <div class="photo-grid">
+    <main>
+        <div class="grid-2-colums-1-row">
             @foreach($placeofinterests as $placeofinterest)
-            @foreach($placeofinterest->Photos as $photo)
-            <a href="/placeofinterest/{{$placeofinterest->id}}"><div class="card" style="background-image:url({{$photo->url}});">
-                    {{$placeofinterest->title}} 
-                </div>
-            @endforeach
+                    @foreach($placeofinterest->Photos as $photo)
+                        <a href="/placeofinterest/{{$placeofinterest->id}}">">
+                            <div class="photo-card" style="background-image:url({{$photo->url}});">
+                                {{$placeofinterest->title}}
+                            </div>
+                        </a>
+                    @endforeach
             @endforeach
         </div>
+        <!-- <div class="photo-grid">
+            @foreach($placeofinterests as $placeofinterest)
+                @foreach($placeofinterest->Photos as $photo)
+                    <div class="card" style="background-image:url({{$photo->url}});">
+                        {{$placeofinterest->title}} 
+                    </div>
+                @endforeach
+            @endforeach
+        </div> -->
     </main>
 </body>
 </html>

@@ -10,16 +10,14 @@ use Illuminate\Http\Request;
 
 class PlaceofinterestController extends Controller
 {
-    public function getTheplaceofinterest(Country $Country)
+    public function getTheplaceofinterest(Country $Country, Placeofinterest $placeofinterest, Photo $photoo )
     {
         $continent = Continent::all();
-        $placeofinterest = Placeofinterest::all();
-        $photoo = Photo::all();
 
         return view('placeofinterest',[
         'continents'=> $continent,
         'countries'=> $Country,
-        'placeofinterests'=> $placeofinterest,
+        'placeofinterest'=> $placeofinterest,
         'photoo'=>$photoo,
         ]);
     }

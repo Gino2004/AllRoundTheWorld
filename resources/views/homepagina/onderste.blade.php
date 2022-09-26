@@ -9,58 +9,60 @@
 </head>
 
 <style> 
-.photos{
-    display: block;
-    margin-left: 50px;
-    margin-top: 70px;
-    margin-right: auto;
-    height: 370px;
-    width: 570px;
-    border-radius:20px;
-    border-radius:20px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    margin-left: 70px;
-}
-.card2 {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  max-width: 650px;
-  height:350px;
-  font-family: arial;
-  background-color: #fff;
-  margin-left: 789px;
-  margin-top: -375px;
-  border-radius: 20px;
-  color: black;
-}
-
-.card3 {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  max-width: 631px;
-  height: 377px;
-  font-family: arial;
-  background-color: #fff;
-  margin-left: -810px;
-  margin-top: 32px;
-  border-radius: 20px;
-  color: black;
-}
-
+    .grid-2-colums-1-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 300px;
+    }
+    .card-photo{
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius:20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    .card-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .title-text{
+        font-size: 3rem;
+        color: black;
+        font-weight: bold;
+    }
+    .desc-text{
+        font-size: 1rem;
+        color: black;
+    }
 </style>
 
 <body>
     <main>
-    @foreach($placeofinterestsen as $placeofinterests)
-            @foreach($placeofinterests->Photos as $photo)
-            <img class="card3" src="{{$photo->url}}">
+        <div class="grid-2-colums-1-row">
+            @foreach($placeofinterestsen as $placeofinterests)
+                @foreach($placeofinterests->Photos as $photo)
+                    <div class="card-photo" style="background-image:url({{$photo->url}});"></div>
+                    <div class="card-text">
+                        <div class="title-text">
+                            {{$placeofinterests->title}}
+                        </div>
 
-        <div class="card2">
-            {{$placeofinterests->title}}
-            {{$placeofinterests->description}}
-        </div>
-        </div>
-        @endforeach
-        @endforeach
+                        <br/>
 
+                        <div class="desc-text">
+                            {{$placeofinterests->description}}
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+        </div>
     </main>
 </body>
 

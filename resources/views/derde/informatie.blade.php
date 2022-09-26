@@ -22,13 +22,13 @@ body{
   font-family: arial;
   background-color: #fff;
   border-radius: 20px;
+  margin-bottom:20px;
+  margin-top:20px
 }
 
 .img {
-    display: block;
-    margin-left: 50px;
-    margin-top: 70px;
-    /*margin-right: auto;*/
+    margin-right: 700px;
+    margin-top: 159px;
     height:auto;
     width: 600px;
     border-radius:20px;
@@ -42,7 +42,7 @@ body{
   font-family: Arial, sans-serif;
   background-color: #fff;
   margin-left: 700px;
-  margin-top: -475px;
+  margin-top: -387px;
   border-radius: 20px;
 }
 
@@ -61,19 +61,20 @@ body{
 </head>
 <body>
 <div class="card">
+@foreach($placeofinterest->Photos as $photoo)
+    <img src="{{$photoo->url}}" class="img">
+      @endforeach
+      <div class="card2">
+      <h1>{{$placeofinterest->title}}</h1>
+
+      <h3>{{$placeofinterest->description}}</h3>
+      </div>
+
+      <div class="card3">
+      <h3>test rating card</h3>
+      </div>
+
     </div>
     </a>
-  <h1> {{$placeofinterest->title}}</h1>
-  <img src="{{$placeofinterests->Photos->url}}" class="img">
-
-  <div class="card2">
-  <h3>{{$placeofinterest->description}}</h3>
-  </div>
-
-  <div class="card3">
-  <h3>test rating card</h3>
-  </div>
-
-</div>
 </body>
 </html>

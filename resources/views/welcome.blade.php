@@ -422,7 +422,7 @@
             max-width: 95%;
             padding-top: 40px;
             padding-bottom: 40px;
-            margin-top: -160px;
+            margin-top: -190px;
             background-color: #fff;
         }
         .cards3{
@@ -432,7 +432,7 @@
             max-width: 95%;
             padding-top: 40px;
             padding-bottom: 40px;
-            margin-bottom: -232px;
+            margin-bottom: -190px;
             background-color: #fff;
             position: relative;
         }
@@ -447,7 +447,7 @@
         }
         .fixed-bg2 {
             background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
-            min-height: 300px;
+            min-height: 250px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;

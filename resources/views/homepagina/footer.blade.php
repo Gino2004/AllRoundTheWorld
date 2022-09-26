@@ -18,9 +18,9 @@
         }
 
         table{
-         border: 1px solid;
-         font-family: Arial, Helvetica, sans-serif;
-         margin-left: 59px;
+            border: 1px solid;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 59px;
         }
     </style>
 <footer>

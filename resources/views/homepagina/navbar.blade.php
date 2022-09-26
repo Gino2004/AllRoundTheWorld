@@ -113,6 +113,11 @@
             .LogoPhoto{
                 width: 70px;
             }
+            a:active, a:focus {
+                outline: 0;
+                border: none;
+                -moz-outline-style: none;
+            }
 
 
         </style>
