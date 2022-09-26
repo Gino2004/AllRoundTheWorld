@@ -15,7 +15,7 @@
 
 
     <div class="mySlides fade">
-        <img class="photo" src="{{$photo->url}}" style="width:100%">
+        <img class="photo" src="{{$photo->url}}" style="width:75%">
 
     </div>
 
