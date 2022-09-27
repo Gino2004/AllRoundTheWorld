@@ -62,7 +62,7 @@
             background-color: #2c3e50;
             margin-top: 25px;
         }
-
+</style>
     <footer>
         <div class="footer">
             <div class="grid-3-columns-1-row"> 
