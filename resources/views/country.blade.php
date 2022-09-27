@@ -103,7 +103,7 @@
             margin-bottom: 40px;
             background-color: #fff;
             position: relative;
-            height: 680px;
+            height: auto;
             margin-left: 10%;
             margin-top: -260px;
             
