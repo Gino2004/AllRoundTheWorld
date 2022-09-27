@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<style>
-body{
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        color: white;
+        text-decoration: none;
+      }
+      body{
+          background-color: #d5d5d5;
+          font-family: Arial, sans-serif;
+      }
 
-    background-color: #d5d5d5;
-    font-family: Arial, sans-serif;
-    
-}
+      .main-card {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        max-width: 1400px;
+        height:auto;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        background-color: #fff;
+        border-radius: 20px;
+        margin-bottom:40px;
+        margin-top:40px;
+        color: black;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
 
-.card {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  max-width: 1400px;
-  height:670px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  background-color: #fff;
-  border-radius: 20px;
-  margin-bottom:20px;
-  margin-top:20px
-}
+      .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: black;
+      }
 
-.img {
-    margin-right: 700px;
-    margin-top: 159px;
-    height:auto;
-    width: 600px;
-    border-radius:20px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.card2 {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  max-width: 650px;
-  height:350px;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  margin-left: 700px;
-  margin-top: -387px;
-  border-radius: 20px;
-}
-
-.card3 {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  max-width: 650px;
-  height:90px;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  margin-left: 700px;
-  margin-top: 20px;
-  border-radius: 20px;
-}
-
-</style>
-</head>
-<body>
-<div class="card">
-@foreach($placeofinterest->Photos as $photoo)
-    <img src="{{$photoo->url}}" class="img">
-      @endforeach
-      <div class="card2">
-      <h1>{{$placeofinterest->title}}</h1>
-
-      <h3>{{$placeofinterest->description}}</h3>
+      .img {
+        height:auto;
+        width: 100%;
+        margin-left: 6.5%;
+        margin-right: 6.5%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius:20px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+      .card2 {
+        width: 90%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        border-radius: 20px;
+        color: black;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+      .photo{
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+      }
+      .title-text{
+        font-size: 3rem;
+        font-weight: bold;
+        color: black;
+        font-family: Arial, sans-serif;
+      }
+      .desc-text{
+        font-size: 1rem;
+        color: black;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-card">
+      <div class="grid">
+        <div class="photo">
+          @foreach($placeofinterest->Photos as $photoo)
+            <img src="{{$photoo->url}}" class="img">
+          @endforeach
+        </div>
+        <div class="text">
+          <div class="card2">
+            <div class="title-text">
+              {{$placeofinterest->title}}
+            </div>
+            <br/>
+            <div class="desc-text">
+              {{$placeofinterest->description}}
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="card3">
-      <h3>test rating card</h3>
-      </div>
-
     </div>
-    </a>
-</body>
+  </body>
 </html>
