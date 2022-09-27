@@ -15,6 +15,7 @@
         }
         .footer{
             background-color: #2c3e50;
+            margin-top: 25px;
         }
 
         table{

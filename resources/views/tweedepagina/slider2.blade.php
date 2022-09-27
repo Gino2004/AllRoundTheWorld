@@ -21,12 +21,14 @@
 
         .photo {
             vertical-align: middle;
-            border-radius: 30px;
-            height:500px;
+            border-radius: 24px;
+            height:350px;
             /* margin-bottom:20px; */
             /* margin-top:80px; */
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        }
+            position: relative;
+            margin-left: 8%;
+ }
 
         /* Slideshow container */
         .slideshow-container {
@@ -64,6 +66,10 @@
         .name{
             margin-left:45%;
         }
+
+        h1{
+             color:black;
+        }
     </style>
 <body>
     <div class="name">
@@ -76,7 +82,7 @@
 
 
     <div class="mySlides fade">
-        <img class="photo" src="{{$photo->url}}" style="width:75%">
+        <img class="photo" src="{{$photo->url}}" style="width:80%">
 
     </div>
 

@@ -27,7 +27,7 @@
                 border-radius: 4px;
                 transition: all 500ms;
                 overflow: hidden;
-                
+                width: 700px;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -75,12 +75,63 @@
             @media only screen and (max-width: 300px) {
             .text {font-size: 11px}
             }
+
+    .cardcntry1{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 12px;
+            max-width: 80%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            background-color: #fff;
+            position: relative;
+            height: 500px;
+            margin-left: 10%;
+            margin-top: 20px;
+            margin-bottom: -180px;
+        }
+    
+
+        .cardcntry2{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 12px;
+            max-width: 80%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            background-color: #fff;
+            position: relative;
+            height: 680px;
+            margin-left: 10%;
+            margin-top: -260px;
+            
+        }
+
+        .fixed-bg {
+            background-image: url("https://cdn.discordapp.com/attachments/748841795714154537/1022104150244327525/wereldkaart.jpg");
+            min-height: 600px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         </style>
         @include('homepagina.navbar')
         </head>
-<main>
-    @include('tweedepagina.slider2')
-    @include('tweedepagina.tussen2')
+        <main>
+        <div class="cardcntry1">
+            @include('tweedepagina.slider2')
+        </div>
+
+        <div class="fixed-bg"></div>
+
+        <div class="cardcntry2">
+            @include('tweedepagina.tussen2')
+        </div>
+
         </main>
         @include('homepagina.footer')
     </body>

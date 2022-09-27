@@ -16,7 +16,7 @@
             grid-template-columns: 1fr 1fr;
             grid-auto-rows: 300px;
         }
-        .card{
+        .photo2{
             margin-left: 5%;
             margin-right: 5%;
             display: flex;
@@ -27,7 +27,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border-radius:20px;
+            border-radius:24px;
             height: 100%;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
             
@@ -42,7 +42,7 @@
 
         @foreach($countries->placeofinterests as $placeofinterest)
         @foreach($placeofinterest->Photos as $photo)
-        <a href="/placeofinterest/{{$placeofinterest->id}}"><div class="card" style="background-image:url({{$photo->url}});">
+        <a href="/placeofinterest/{{$placeofinterest->id}}"><div class="photo2" style="background-image:url({{$photo->url}});">
             {{$placeofinterest->title}}
         </div>
         </a>
