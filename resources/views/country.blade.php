@@ -159,14 +159,16 @@
 
         @if($user != null)
             @if ($user->email == 'allaroundtheworld@gmail.com')
-                <a href="/">
+                <a href="">
                     <div class="crud-card">
                         Add new 
                     </div>
                 </a>
+
             @else
             @endif
         @endif
+       
 
         </main>
         @include('homepagina.footer')
