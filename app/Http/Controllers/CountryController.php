@@ -7,12 +7,14 @@ use App\Models\Country;
 use App\models\Photo;
 use App\Models\placeofinterest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CountryController extends Controller
 {
     //
     public function getcountry()
     {
+        $user = Auth::user();
         $continent = Continent::all();
         $country = Country::all();
         $photo = Photo::all();
@@ -22,6 +24,7 @@ class CountryController extends Controller
     
         return view('welcome',
     [
+        'user'=> $user,
         'continents'=> $continent,
         'countries'=> $country,
         'photos'=>$photo,
@@ -33,11 +36,13 @@ class CountryController extends Controller
 
     public function getThecountry(Country $Country)
     {
+        $user = Auth::user();
         $continent = Continent::all();
         $placeofinterest = Placeofinterest::limit(10)->get();
         $photoo = Photo::limit(3)->get();
 
         return view('country',[
+        'user'=> $user,
         'continents'=> $continent,
         'countries'=> $Country,
         'placeofinterests'=> $placeofinterest,

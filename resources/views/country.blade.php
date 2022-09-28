@@ -118,6 +118,28 @@
             background-size: cover;
         }
 
+        .crud-card{
+            margin-left: 2.5%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 20px;
+            max-width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* padding-left: 40px;
+            padding-right: 40px; */
+            margin-top: -20px;
+            background-color: #fff;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-left: 10%;
+        }
+
         </style>
         @include('homepagina.navbar')
         </head>
@@ -131,6 +153,17 @@
         <div class="cardcntry2">
             @include('tweedepagina.tussen2')
         </div>
+
+        @if($user != null)
+            @if ($user->email == 'allaroundtheworld@gmail.com')
+                <a href="/">
+                    <div class="crud-card">
+                        Add new 
+                    </div>
+                </a>
+            @else
+            @endif
+        @endif
 
         </main>
         @include('homepagina.footer')

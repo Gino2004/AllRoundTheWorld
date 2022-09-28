@@ -3,6 +3,7 @@
 use App\Http\Controllers\PlaceofinterestController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,3 +45,4 @@ Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');
 Route::get('/bestemming', function (){
     return view('bestemming');
 });
+
