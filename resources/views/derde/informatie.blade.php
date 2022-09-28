@@ -80,23 +80,7 @@
         padding-left:20px;
         padding-right: 20px;
       }
-      .crud-card{
-            margin-left: 4.5%;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            border-radius: 20px;
-            max-width: 91%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            background-color: #fff;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            color: black;
-            font-size: 2rem;
-            font-weight: bold;
-        }
+
     </style>
   </head>
   <body>
@@ -120,15 +104,5 @@
         </div>
       </div>
     </div>
-    @if($user != null)
-        @if ($user->email == 'allaroundtheworld@gmail.com')
-            <a href="/">
-                <div class="crud-card">
-                    Add new 
-                </div>
-            </a>
-        @else
-        @endif
-    @endif
   </body>
 </html>
