@@ -24,33 +24,4 @@ class PlaceofinterestController extends Controller
         'photoo'=>$photoo,
         ]);
     }
-    public function getCreate(Country $country)
-    {
-        return view('create',[
-            'country'=> $country,
-
-        ]);
-
-    }
-    public function postplaceofinterest()
-    {
-        $data = request()->validate([
-            'title' => 'required | max:255 | min:3',
-            'description' => 'required | max:255 | min:3'
-
-        ]);
-        Placeofinterest::create($data);
-
-        return redirect('/');
-    }
-    public function postphoto()
-    {
-        $data = request()->validate([
-            'photo' => 'required | max:255 | min:3',
-
-        ]);
-        Photo::create($data);
-
-        return redirect('/');
-    }
 }

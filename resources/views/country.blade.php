@@ -156,19 +156,6 @@
         <div class="cardcntry2">
             @include('tweedepagina.tussen2')
         </div>
-
-        @if($user != null)
-            @if ($user->email == 'allaroundtheworld@gmail.com')
-                <a href="/create/{{$country->id}}">
-                    <div class="crud-card">
-                        Add new 
-                    </div>
-                </a>
-            @else
-            @endif
-        @endif
-       
-
         </main>
         @include('homepagina.footer')
     </body>
