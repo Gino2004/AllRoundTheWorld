@@ -61,6 +61,8 @@
       .photo{
         color: black;
         display: flex;
+        height: auto;
+        width: auto;
         align-items: center;
         justify-content: center;
         margin-top: auto;
@@ -75,6 +77,8 @@
         font-size: 1rem;
         color: black;
         font-family: Arial, sans-serif;
+        padding-left:20px;
+        padding-right: 20px;
       }
     </style>
   </head>

@@ -43,7 +43,7 @@
         <div class="grid-2-colums-1-row">
             @foreach($placeofinterests as $placeofinterest)
                     @foreach($placeofinterest->Photos as $photo)
-                        <a href="/placeofinterest/{{$placeofinterest->id}}">">
+                        <a href="/placeofinterest/{{$placeofinterest['id']}}">">
                             <div class="photo-card" style="background-image:url({{$photo->url}});">
                                 {{$placeofinterest->title}}
                             </div>
