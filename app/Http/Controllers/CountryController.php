@@ -18,9 +18,9 @@ class CountryController extends Controller
         $continent = Continent::all();
         $country = Country::all();
         $photo = Photo::all();
-        $placeofinterest = Placeofinterest::limit(2)->get();
-        $photoo = Photo::limit(3)->get();
-        $placeofinterestsen = Placeofinterest::limit(1)->get();        
+        $placeofinterest = Placeofinterest::inRandomOrder()->limit(2)->get();
+        $photoo = Photo::inRandomOrder()->limit(3)->get();
+        $placeofinterestsen = Placeofinterest::inRandomOrder()->limit(1)->get();        
     
         return view('welcome',
     [
@@ -38,7 +38,7 @@ class CountryController extends Controller
     {
         $user = Auth::user();
         $continent = Continent::all();
-        $placeofinterest = Placeofinterest::limit(10)->get();
+        $placeofinterest = Placeofinterest::inRandomOrder()->limit(10)->get();
         $photoo = Photo::limit(3)->get();
 
         return view('country',[
