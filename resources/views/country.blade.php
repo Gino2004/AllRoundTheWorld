@@ -43,7 +43,10 @@
                 grid-auto-rows: 240px;
             }
 
-            * {box-sizing: border-box;}
+            * {
+                box-sizing: border-box;
+                text-decoration: none;
+            }
             body {font-family: Verdana, sans-serif;}
             .mySlides {display: none;}
             img {vertical-align: middle; border-radius:80px;}
