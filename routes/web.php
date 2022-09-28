@@ -45,3 +45,5 @@ Route::get('/', [CountryController::class, 'getcountry'])->name('getcountry');
 Route::get('/bestemming', function (){
     return view('bestemming');
 });
+Route::get('/create/{country}', [PlaceofinterestController::class, 'getcreate'])->name('crud.create');
+Route::post('/create/{country}', [PlaceofinterestController::class, 'postplaceofinterest'])->name('crud.create.country');

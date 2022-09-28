@@ -9,7 +9,7 @@
 <body>
 <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            <form action="{{ route('create/{country}') }}" method="post">
+            <form action="{{ route('crud.create.country') }}" method="post">
                 {{ csrf_field() }}
                 <table>
                 <tr>
